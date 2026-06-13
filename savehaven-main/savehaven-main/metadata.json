@@ -1,0 +1,6 @@
+{
+  "name": "SafeHaven",
+  "description": "SafeHaven provides secure monitoring, live camera feeds, smart device management, real-time security alerts, and customized user identity settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
