@@ -1,5 +1,6 @@
 import logging
 import threading
+import uuid
 from typing import Optional
 
 import paho.mqtt.client as mqtt
@@ -15,7 +16,7 @@ _start_lock = threading.Lock()
 
 
 def _build_client() -> mqtt.Client:
-    client_id = settings.MQTT_CLIENT_ID
+    client_id = f"{settings.MQTT_CLIENT_ID}-{uuid.uuid4().hex[:8]}"
     if mqtt.CallbackAPIVersion is not None:
         client = mqtt.Client(
             callback_api_version=mqtt.CallbackAPIVersion.VERSION2,
